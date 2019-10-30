@@ -3,7 +3,8 @@ const express = require('express')
 
 
 const app = express()
-const staticDirPath = path.join(__dirname, '../Public')
+const staticDirPath = path.join(__dirname, '../Public/')
+// const staticDirPath = (__dirname + '/public/')
 
 const port = process.env.PORT || 3000
 app.set('view engine', 'hbs')
