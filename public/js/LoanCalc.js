@@ -71,6 +71,7 @@ function calculate(principal, deposit, term, rate) {
     var sMonthlyPayble = Math.round(MonthlyPayble * 100) / 100;
     
     
+    
     document.getElementById("cprincipal").value = "R" + principal;
     document.getElementById("cdeposit").value = "R" + deposit;
     document.getElementById("cterm").value = "R" + term;
@@ -78,6 +79,7 @@ function calculate(principal, deposit, term, rate) {
     document.getElementById("cmrate").value = "R" + sMonthlyPayble;
     document.getElementById("total").value = "R" + sMonthlyPayble + deposit;
 
+    
 
     var table = "";
     table += "<table cellpadding='21' border='2'>";
@@ -128,5 +130,29 @@ function calculate(principal, deposit, term, rate) {
     table += "</table>";
     document.getElementById("tableOut").innerHTML = table;
     
+    saveDataCalc();
 }
 
+// function saveDataCalc(){
+//     var currentCalcData = {
+//         item1: principal,
+//         item2: deposit,
+//         item3: term,
+//         item4: rate
+//     };
+//     console.log(currentCalcData);
+// }
+
+// function loadDataCalc(){
+
+
+// }
+
+// function saveLocalData() {
+
+// }
+
+// function loadLocalData() {
+
+
+// }

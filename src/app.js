@@ -1,5 +1,6 @@
 const path = require('path')
 const express = require('express')
+const mongo = require('mongodb')
 const app = express()
 const staticDirPath = path.join(__dirname, '../public/')
 // const staticDirPath = (__dirname + '/public/')
