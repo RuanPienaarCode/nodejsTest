@@ -1,7 +1,5 @@
 const path = require('path')
 const express = require('express')
-
-
 const app = express()
 const staticDirPath = path.join(__dirname, '../public/')
 // const staticDirPath = (__dirname + '/public/')
@@ -18,21 +16,7 @@ app.get('', (req, res) => {
     })
  })
 
- app.get('/about', (req, res) => {
 
-     res.render('about', {
-         title: 'live App - About Page',
-         name: 'Ruan again'
-     })
- })
-
- app.get('/help', (req, res) => {
-
-     res.render('help', {
-         title: 'live App - Help Page',
-         name: 'Ruan again and again'
-     })
- })
 
 
 // app.get('/more', (req, res) => {

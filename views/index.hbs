@@ -3,28 +3,125 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html>
+<html class="no-js">
 <!--<![endif]-->
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>First Live App</title>
+    <title>Bond Calculator </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script type='text/javascript' src='js/app.js'></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="Images/favicon.ico" />
 </head>
 
 <body>
-    <h2>Test generated page {{name}}</h2>
-    <h3>{{title}}</h3>
-    <p>This is my first basic web app</p>
+    <div id="app">
+
+        <button id="headingBanner">Bond Calculator</button>
+        <div id="clearfix"></div>
+        <div id="ValueInput">
+            <form id="loanInput">
+                <p>Step1) House Purchase Price:</p>
+                <input type="text" placeholder="Purchase Price:" name="principal" id="principal" value="200000">
+                <p>Step2) Deposit Paid:</p>
+                <input type="text" placeholder="Deposit Paid:" name="deposit" value="1">
+                <p>Step3) Bond Term (Years):</p>
+                <input type="text" placeholder="Bond Term (Years):" name="term" value="30">
+                <p>Step4) Fixed Interest Rate: </p>
+                <input type="text" placeholder="Fixed Interest Rate: ex. 4.5 (%)" name="rate" value="6.5">
+
+                <br><br>
+                <button type="button" id="validateDisplay" onclick="validate()" value="calculate">Calculate</button>
+                <button type="button" id="resetDisplay" onclick="resetcalc()">Reset</button>
+                <p>Monthly Interest Rate:</p>
+                <input type="text" placeholder="Monthly Interest Rate:" name="mrate" value="">
+            </form>
+        </div>
+
+        <div id="loanStat">
+
+            <p>Purchase Price:</p>
+            <input type="text" placeholder="Purchase Price:" id="cprincipal" value="" enable>
+
+            <p>Deposit Paid:</p>
+            <input type="text" placeholder="Deposit Paid:" id="cdeposit" value="" disabled>
+
+            <p>Bond Term (Years):</p>
+            <input type="text" placeholder="Bond Term (Years):" id="cterm" value="" disabled>
+
+            <p>Fixed Interest Rate:</p>
+            <input type="text" placeholder="Fixed Interest Rate:" id="crate" value="" disabled>
+            <p>Monthly Interest Rate:</p>
+            <input type="text" placeholder="Monthly Interest Rate:" id="cmrate" value="" disabled>
+
+            <p>Total Payment:</p>
+            <input type="text" placeholder="Total Payment:" id="total" value="" disabled>
+
+
+        </div>
+
+
+
+
+        <div class="clearfix"></div>
+
+
+        <div class="md-form">
+            <div class="saveinput">
+                <div class="md-form">
+                    <input type="text" id="form1" class="form-control" placeholder="name">
+
+                </div>
+
+                <button class="btn btn-primary" type="button" onclick="save()" value="save">SAVE
+                    SESSION</button>
+            </div>
+
+        </div>
+
+
+        <div class="clearfix"></div>
+        <div class="tabelAll">
+            <div id="PaymentTable">
+
+                <table cellpadding="21" border='2'>
+                    <tr>
+                        <td width="30" align="center"><b>Pmt</b></td>
+                        <td width="60" align="center"><b>Payment</b></td>
+                        <td width="60" align="center"><b>Principal</b></td>
+                        <td width="60" align="center"><b>Interest</b></td>
+                        <td width="85" align="center"><b>Interest Paid</b></td>
+                        <td width="70" align="center"><b>Balance</b></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="tableOut">
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+    <script type="text/javascript" src="js/LoanCalc.js">
 
-
+    </script>
 </body>
 
 </html>
